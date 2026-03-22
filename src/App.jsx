@@ -18,8 +18,8 @@ function App() {
     setError('');
     setResult(null);
     try {
-      const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-      const response = await fetch(`${apiBase}/api/summarize`, {
+  const apiBase = import.meta.env.VITE_API_URL || 'https://assignmentsummarizer-server.onrender.com';
+  const response = await fetch(`${apiBase}/api/summarize`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
